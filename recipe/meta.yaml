@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-sftp" %}
-{% set version = "4.3.1" %}
+{% set version = "4.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-sftp-{{ version }}.tar.gz
-  sha256: 869a1b4658e2ef907526796d91335c1e014ca6f0ed6c292bb62fd66169af8395
+  sha256: dc7b20e4c271e1c2fe299cf824694680f55bfcd16d31fff442df67c740a3a3bd
 
 build:
   noarch: python
