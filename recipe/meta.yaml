@@ -27,7 +27,7 @@ requirements:
 test:
   imports:
     - airflow.providers.sftp
-    - airflow.providers.sftp.hooks
+    - airflow.providers.sftp.decorators
   commands:
     - pip check
   requires:
