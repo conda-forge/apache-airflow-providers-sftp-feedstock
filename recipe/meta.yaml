@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-sftp" %}
-{% set version = "4.10.3" %}
+{% set version = "4.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_sftp-{{ version }}.tar.gz
-  sha256: 6e0b4de575df5c11276d44d28735561747032823ebd897f6038b4d6136a3b14f
+  sha256: 2b86a3e9533132e78beccbfff63af63d7cf9eee1c57effa6264d207eefb6d720
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8,<4.dev0
     - apache-airflow-providers-ssh >=2.1.0
-    - apache-airflow >=2.7.0
+    - apache-airflow >=2.8.0
     - asyncssh >=2.12.0
     - paramiko >=2.9.0
 
