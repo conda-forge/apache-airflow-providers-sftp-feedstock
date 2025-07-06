@@ -1,5 +1,6 @@
 {% set name = "apache-airflow-providers-sftp" %}
 {% set version = "5.3.2" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
