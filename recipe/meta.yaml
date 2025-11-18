@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-sftp" %}
-{% set version = "5.4.1" %}
-{% set python_min = "3.10" %}
+{% set version = "5.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_sftp-{{ version }}.tar.gz
-  sha256: dd488f3535dbab05892dee62f80a099422d9f1fb9cfefeaeafd29c41163aefd4
+  sha256: f4e75b4cf278a5d01f09375cfbb28493a809a9512acb5cccaeedce86a27a017f
 
 build:
   noarch: python
@@ -24,6 +23,7 @@ requirements:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - apache-airflow-providers-ssh >=4.0.0
+    - apache-airflow-providers-common-compat >=1.8.0
     - paramiko >=2.9.0,<4.0.0
     - asyncssh >=2.12.0
 
@@ -40,7 +40,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-sftp for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/sftp/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-sftp/stable/index.html
   dev_url: https://github.com/apache/airflow/
