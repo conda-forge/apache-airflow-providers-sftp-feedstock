@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-sftp
-  version: "5.7.2"
+  version: "5.7.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_sftp-${{ version }}.tar.gz
-  sha256: 7b6d52ff209ed7c0444d11ed39b37dea2d0c850e7fe916497da7d83b3b30c520
+  sha256: 9df34f404a7cb03bff3e8cd2d91847a58d185f82bf8347253035b43a4e6360bf
 
 build:
   noarch: python
@@ -34,7 +34,9 @@ tests:
       imports:
         - airflow.providers.sftp
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
