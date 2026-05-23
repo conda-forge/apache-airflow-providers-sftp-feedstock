@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-sftp
-  version: "5.7.4"
+  version: "5.8.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_sftp-${{ version }}.tar.gz
-  sha256: b5aa72b53e222dcad004d8f868b52744a7f481f85ed4f8ff3c19e22229df6625
+  sha256: b2b270548b9e52fd994b3f0c026caf1967df89bfbe7aa1097895c8e7cfdf7a6c
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - flit-core ==3.12.0
   run:
     - python >=${{ python_min }}
+    - aiofiles >=23.2.0
     - apache-airflow >=2.11.0
     - apache-airflow-providers-ssh >=4.0.0
     - apache-airflow-providers-common-compat >=1.12.0
