@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-sftp
-  version: "6.0.0"
+  version: "6.0.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_sftp-${{ version }}.tar.gz
-  sha256: 2f29c69c89ce2d8041bee88ca99f784a47cf0808fba9591cb78b6882d5aa1fc0
+  sha256: 29730124e60ff5d0ce82a5a69d6fb1d3ee7c78a27ce1e3182965f048546c5dd1
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - apache-airflow >=2.11.0
     - apache-airflow-providers-ssh >=6.0.0
     - apache-airflow-providers-common-compat >=1.12.0
-    - paramiko >=4.0.0,<5.0.0
+    - paramiko >=4.0.0
     # more restrictive for python >=3.14
     - asyncssh >=2.22.0
 
